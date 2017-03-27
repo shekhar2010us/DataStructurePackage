@@ -45,7 +45,9 @@ public class ChainMap implements Map {
   
   @Override
   public int getHashCode(String key) {
-    return h.hash_function(key, N);
+      int h1 = h.hash_function(key, N);
+      System.out.println(key + " => " + h1);
+    return h1;
   }
   
   public class Node {

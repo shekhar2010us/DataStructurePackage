@@ -9,11 +9,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import shekhar.util.ds.map.implementations.ChainMap;
 import shekhar.util.ds.map.implementations.DHashMap;
 import shekhar.util.ds.map.interfaces.Map;
 import shekhar.util.ds.map.utilities.HashFunction;
@@ -69,40 +67,42 @@ public class MapTest {
     
     String file = "/Users/shekhar2010us/NetBeansProjects/DataStructurePackage/src/tttt";
     //checkCollisions(file);
-    checkChainMap(file);
+//    checkChainMap(file);
     
-    //checkDHashMap();
+    checkChainMap(file);
     
   }
   
   public static void checkChainMap(String file) {
     Map map = new DHashMap();
     
-//    map.put("shekhar", "100");
-//    map.put("abhik", "75");
-//    map.put("suvid", "50");
+    map.put("shekhar0", "100");
+    map.put("shekhar1", "75");
+    map.put("shekhar2", "50");
+    map.put("shekhar3", "50");
+    map.put("shekhar4", "50");
 //    map.put("puneet", "0");
 //    map.put("puneet2", "0");
 //    map.put("puneet3", "0");
 //    map.put("puneet", "10");
     
-    String text = readFile(file);
-    String [] words = text.split(" ");
-    for ( int i = 0 ; i < words.length; ++i ) {
-      map.put(words[i].trim(), "10");
-      //System.out.println(i + "  element added..");
-    }
-    
-    Set<String> keys = map.keySet();
-    //System.out.println("All Keys: " + keys + "\n");
-    
-    for (String key : map.keySet()) {
-      System.out.println( map.getHashCode(key) + " - " + key + " - " + map.get(key) );
-    }
-    
-    map.devUtils();
-    
-    map.printTomb();
+//    String text = readFile(file);
+//    String [] words = text.split(" ");
+//    for ( int i = 0 ; i < words.length; ++i ) {
+//      map.put(words[i].trim(), "10");
+//      //System.out.println(i + "  element added..");
+//    }
+//    
+//    Set<String> keys = map.keySet();
+//    //System.out.println("All Keys: " + keys + "\n");
+//    
+//    for (String key : map.keySet()) {
+//      System.out.println( map.getHashCode(key) + " - " + key + " - " + map.get(key) );
+//    }
+//    
+//    map.devUtils();
+//    
+//    map.printTomb();
   }
   
   public static String readFile(String filename) {

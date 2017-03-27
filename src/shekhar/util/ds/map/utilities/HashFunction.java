@@ -31,6 +31,7 @@ public class HashFunction {
   public int hash_function(String string, int m) {
    BigDecimal k = hashcodemap.polynomial_accumulation(string);
    this.hashcode = compressioncodemap.fibonacci_hashing(k, m);
+   System.out.println(string + " ==> " + k + "  ==> " + getHashCode());
    return getHashCode();
   }
   
